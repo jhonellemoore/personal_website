@@ -11595,41 +11595,16 @@ html {
   left: 50%;
   transform: translateX(-50%);
 }
-.profile .dots-1 {
+.profile::before {
+  content: '';
   position: absolute;
-  width: 3vw;
-  right: 1.5vw;
-  top: 4vw;
-}
-.profile .dots-1 svg {
-  fill: #fff;
-}
-.profile .dots-2 {
-  position: absolute;
-  width: 3vw;
-  right: -4vw;
-  top: 6.05vw;
-}
-.profile .dots-2 svg {
-  fill: #1e30f3;
-}
-.profile .dots-3 {
-  position: absolute;
-  width: 3vw;
-  left: 1.5vw;
-  bottom: 6.05vw;
-}
-.profile .dots-3 svg {
-  fill: #fff;
-}
-.profile .dots-4 {
-  position: absolute;
-  width: 3vw;
-  left: -4vw;
-  bottom: 4vw;
-}
-.profile .dots-4 svg {
-  fill: #1e30f3;
+  top: -13px; /* Adjust the offset to control the outline thickness */
+  left: -13px; /* Adjust the offset to control the outline thickness */
+  right: -13px; /* Adjust the offset to control the outline thickness */
+  bottom: -13px; /* Adjust the offset to control the outline thickness */
+  background: -webkit-linear-gradient(315deg, #1e30f3 0%, #e21e80 100%); /* Gradient colors */
+  z-index: -1; /* Ensure the gradient is behind the content */
+  border-radius: 6vw; /* Adjust to match the profile element’s border-radius */
 }
 
 @media (min-width: 576px) {
@@ -11732,3 +11707,8 @@ html {
     left: -2vw;
   }
 }
+
+.bg-solid-primary {
+  background-color: #ffff; 
+}
+
